@@ -30,18 +30,12 @@ int main(void) {
 		A[i] = d;
 	}
 
-	sort(A, A + 10);
+	sort(A, A + n);
 	cout << endl;
 
 	for (k = 0; k < n2; ++k) {
+		r = DBL_MAX;
 		for (i = 0; i < n - 1; ++i) {
-			if ((D[i] == 0) && (D[i + 1] == 0)) {
-				r = abs(A[i] - A[i + 1]);
-				i1 = i;
-				break;
-			}
-		}
-		for (i; i < n - 1; ++i) {
 			if ((D[i] == 0) && (D[i + 1] == 0)) {
 				if (r > abs(A[i] - A[i + 1])) {
 					r = abs(A[i] - A[i + 1]);
